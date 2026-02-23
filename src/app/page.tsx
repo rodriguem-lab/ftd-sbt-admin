@@ -298,7 +298,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen p-8 text-neutral-100 bg-gradient-to-b from-neutral-950 via-neutral-950 to-slate-950">
+    <main className="min-h-screen bg-gray-50 text-gray-900 p-10">
       <div className="max-w-5xl mx-auto space-y-6">
         <header className="flex items-start justify-between gap-4">
           <div>
@@ -310,7 +310,7 @@ export default function Home() {
           <ConnectButton />
         </header>
 
-        <section className="rounded-2xl border border-neutral-800 p-5 bg-neutral-900/40">
+        <section className="rounded-xl bg-white shadow-sm border border-gray-200 p-6">
           <h2 className="text-xl font-semibold">Contract status</h2>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div className="rounded-xl border border-neutral-800 p-4">
@@ -318,7 +318,7 @@ export default function Home() {
               <div className="mt-1 font-mono break-all">{CONTRACT_ADDRESS}</div>
             </div>
 
-            <div className="rounded-xl border border-neutral-800 p-4">
+            <div className="rounded-xl bg-white shadow-sm border border-gray-200 p-6">
               <div className="text-neutral-400">Réseau connecté</div>
               <div className="mt-1">
                 {isConnected ? (
@@ -345,14 +345,14 @@ export default function Home() {
               )}
             </div>
 
-            <div className="rounded-xl border border-neutral-800 p-4">
+            <div className="rounded-xl bg-white shadow-sm border border-gray-200 p-6">
               <div className="text-neutral-400">Owner (owner())</div>
               <div className="mt-1 font-mono break-all">
                 {owner ? String(owner) : "…"}
               </div>
             </div>
 
-            <div className="rounded-xl border border-neutral-800 p-4">
+            <div className="rounded-xl bg-white shadow-sm border border-gray-200 p-6">
               <div className="text-neutral-400">Wallet connecté = owner ?</div>
               <div className="mt-1">
                 {!isConnected ? (

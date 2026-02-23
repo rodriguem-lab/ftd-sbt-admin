@@ -249,7 +249,7 @@ export default function Home() {
     }
 
     const tid = BigInt(revokeId || "0");
-    if (tid <= 0n) {
+    if (tid <= BigInt(0)) {
       addLog({
         at: nowIso(),
         action: "revoke",

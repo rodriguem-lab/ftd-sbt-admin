@@ -298,7 +298,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen p-8 bg-neutral-950 text-neutral-100">
+    <main className="min-h-screen p-8 text-neutral-100 bg-gradient-to-b from-neutral-950 via-neutral-950 to-slate-950">
       <div className="max-w-5xl mx-auto space-y-6">
         <header className="flex items-start justify-between gap-4">
           <div>

@@ -371,8 +371,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
+className="rounded-xl bg-white shadow-sm border border-gray-200 p-6"
+        <section className="rounded-xl bg-white shadow-sm border border-gray-200 p-6">
           <div className="rounded-2xl border border-neutral-800 p-5 bg-neutral-900/40">
             <h3 className="font-semibold text-lg">Mint 1 étudiant</h3>
             <p className="text-sm text-neutral-400 mt-1">
@@ -396,7 +396,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-neutral-800 p-5 bg-neutral-900/40">
+          <div className="rounded-xl bg-white shadow-sm border border-gray-200 p-6">
             <h3 className="font-semibold text-lg">Batch Mint</h3>
             <p className="text-sm text-neutral-400 mt-1">
               Upload CSV/JSON ou colle une liste d’adresses.
@@ -495,7 +495,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+          <div className="rounded-xl bg-white shadow-sm border border-gray-200 p-6">
             <div className="rounded-xl border border-neutral-800 p-4">
               <div className="text-neutral-400">Tx state</div>
               <div className="mt-1">
@@ -504,12 +504,12 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-neutral-800 p-4">
+            <div className="rounded-xl bg-white shadow-sm border border-gray-200 p-6">
               <div className="text-neutral-400">Dernière tx hash</div>
               <div className="mt-1 font-mono break-all">{txHash ?? "—"}</div>
             </div>
 
-            <div className="rounded-xl border border-neutral-800 p-4">
+            <div className="rounded-xl bg-white shadow-sm border border-gray-200 p-6">
               <div className="text-neutral-400">Minted (session)</div>
               <div className="mt-1 text-lg font-semibold">{sessionMinted}</div>
             </div>

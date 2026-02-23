@@ -1,0 +1,4 @@
+export const CONTRACT_ADDRESS =
+  "0xE55725bA42D39ee7CA3a01585B7861612142C7BF" as const;
+
+export const SEPOLIA_CHAIN_ID = 11155111 as const;

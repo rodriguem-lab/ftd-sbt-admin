@@ -8,6 +8,20 @@ export const SBT_ABI = [
   },
   {
     type: "function",
+    name: "tokenIdOf",
+    stateMutability: "view",
+    inputs: [{ name: "", type: "address" }],
+    outputs: [{ name: "", type: "uint256" }],
+  },
+  {
+    type: "function",
+    name: "tokenURI",
+    stateMutability: "view",
+    inputs: [{ name: "tokenId", type: "uint256" }],
+    outputs: [{ name: "", type: "string" }],
+  },
+  {
+    type: "function",
     name: "mint",
     stateMutability: "nonpayable",
     inputs: [{ name: "student", type: "address" }],
@@ -25,6 +39,13 @@ export const SBT_ABI = [
     name: "revoke",
     stateMutability: "nonpayable",
     inputs: [{ name: "tokenId", type: "uint256" }],
+    outputs: [],
+  },
+  {
+    type: "function",
+    name: "setCohortURI",
+    stateMutability: "nonpayable",
+    inputs: [{ name: "newURI", type: "string" }],
     outputs: [],
   },
 ] as const;

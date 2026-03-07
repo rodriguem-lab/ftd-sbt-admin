@@ -1,6 +1,8 @@
 "use client";
 
+
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { isAddress } from "viem";
 import {
@@ -68,6 +70,7 @@ function chunk<T>(arr: T[], size: number): T[][] {
 }
 
 export default function Home() {
+    const router = useRouter();
   const { address, isConnected } = useAccount();
   const chainId = useChainId();
 
@@ -83,6 +86,7 @@ export default function Home() {
   const isSepolia = chainId === SEPOLIA_CHAIN_ID;
   const isOwner =
     !!address && !!owner && address.toLowerCase() === String(owner).toLowerCase();
+  const walletKey = `${address ?? "disconnected"}-${chainId ?? "nochain"}`;
 
   const { writeContract, data: txHash, error: writeError, isPending } =
     useWriteContract();
@@ -316,7 +320,9 @@ React.useEffect(() => {
   }
 
 return (
-  <main className="min-h-screen bg-gray-50 text-gray-900 p-10">
+  <main 
+  key={walletKey}
+    className="min-h-screen bg-gray-50 text-gray-900 p-10">
     <div className="max-w-5xl mx-auto space-y-6">
       <header className="flex items-start justify-between gap-4">
         <div>

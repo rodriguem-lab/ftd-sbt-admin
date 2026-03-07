@@ -128,6 +128,24 @@ export default function Home() {
     }
   }, [txHash, isConfirmed, addLog]);
 
+  React.useEffect(() => {
+  if (!isConnected) {
+    setMintTo("");
+    setRevokeId("");
+    setBatchText("");
+    setLogs([]);
+    setSessionMinted(0);
+  }
+}, [isConnected]);
+
+React.useEffect(() => {
+  setMintTo("");
+  setRevokeId("");
+  setBatchText("");
+  setLogs([]);
+  setSessionMinted(0);
+}, [address]);
+
   function requireReady(): string | null {
     if (!isConnected) return "Connecte ton wallet.";
     if (!isSepolia) return "Passe sur Sepolia.";
